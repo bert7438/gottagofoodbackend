@@ -3,6 +3,7 @@ package ru.ggfteam.gottagofoodbackend;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.ggfteam.gottagofoodbackend.jsonclass.RandJ;
 import ru.ggfteam.gottagofoodbackend.jsonclass.TestUser;
 
 import javax.servlet.http.HttpServlet;
@@ -17,6 +18,11 @@ public class GetJSON extends HttpServlet {
     @GetMapping("/json")
     public TestUser getjson(HttpServletRequest request, HttpServletResponse response){
         return new TestUser();
+    }
+
+    @GetMapping("/test/json/randj")
+    public RandJ getrjson(HttpServletRequest request, HttpServletResponse response){
+        return new RandJ();
     }
 
 }
