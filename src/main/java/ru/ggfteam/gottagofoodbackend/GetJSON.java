@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@SpringBootApplication
+
 @RestController
 
 public class GetJSON extends HttpServlet {
@@ -20,9 +20,12 @@ public class GetJSON extends HttpServlet {
         return new TestUser();
     }
 
-    @GetMapping("/test/json/randj")
+
+
+    @GetMapping("/test")
     public RandJ getrjson(HttpServletRequest request, HttpServletResponse response){
-        return new RandJ();
+        RandJ e = new RandJ();
+        return e;
     }
 
 }
