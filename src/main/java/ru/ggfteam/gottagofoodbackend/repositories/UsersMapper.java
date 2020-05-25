@@ -10,7 +10,7 @@ import java.util.UUID;
 public class UsersMapper implements RowMapper<User> {
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {
         User user = new User();
-        user.setUserID(rs.getInt("id"));
+        user.setUserID(rs.getInt("userID"));
         user.setName(rs.getString("name"));
 
         //getting uuid from string? hope that works
