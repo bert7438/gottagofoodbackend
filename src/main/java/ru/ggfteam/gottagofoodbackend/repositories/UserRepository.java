@@ -4,9 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import ru.ggfteam.gottagofoodbackend.entities.User;
-
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -15,11 +13,12 @@ public class UserRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+
     public int createUser(String name){
         UUID token = UUID.randomUUID();
-        Date reg_date = new Date();
+        java.sql.Date date = new java.sql.Date(Calendar.getInstance().getTime().getTime());
         return jdbcTemplate.update(
-                "INSERT INTO users values(default, ?, ?, ?);", name, token, reg_date);
+                "INSERT INTO users values(default, ?, ?, ?);", name, token, date);
     }
     public int updateUser(User user){
         return jdbcTemplate.update(

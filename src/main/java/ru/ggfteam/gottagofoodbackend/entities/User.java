@@ -1,19 +1,19 @@
 package ru.ggfteam.gottagofoodbackend.entities;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.UUID;
 
 public class User {
-    private int userID;
+    private Integer userID;
     private String name;
     private UUID token;
     private Date reg_date;
 
-    public int getUserID() {
+    public Integer getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(Integer userID) {
         this.userID = userID;
     }
 
