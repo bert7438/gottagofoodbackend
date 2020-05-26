@@ -8,6 +8,7 @@ public class Product {
     private double proteins;
     private double fats;
     private double carbohydrates;
+    private double price;
 
     public double getProductID() {
         return productID;
@@ -63,5 +64,13 @@ public class Product {
 
     public void setCarbohydrates(Double carbohydrates) {
         this.carbohydrates = carbohydrates;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

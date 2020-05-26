@@ -16,6 +16,7 @@ public class ProductsMapper implements RowMapper<Product> {
         product.setProteins(rs.getDouble("proteins"));
         product.setFats(rs.getDouble("fats"));
         product.setCarbohydrates(rs.getDouble("carbohydrates"));
+        product.setPrice(rs.getDouble("price"));
         return product;
     }
 }

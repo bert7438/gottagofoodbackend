@@ -71,11 +71,12 @@ public class DBInterface extends HttpServlet {
             Double prot = Double.parseDouble(request.getParameter("prot"));
             Double f = Double.parseDouble(request.getParameter("f"));
             Double carb = Double.parseDouble(request.getParameter("carb"));
+            Double price = Double.parseDouble(request.getParameter("price"));
             productRepository.createProduct(request.getParameter("name"),
-                    request.getParameter("size"), ev, prot, f, carb);
+                    request.getParameter("size"), ev, prot, f, carb, price);
             return "Entry to DB added, name = " + request.getParameter("name") + ", size = " +
                     request.getParameter("size") + ", energy value = " + ev +
-                    ", proteins = " + prot + ", fats = " + f + ", carbohydrates = " +carb +" .";
+                    ", proteins = " + prot + ", fats = " + f + ", carbohydrates = " +carb +", price = "+price+".";
         }
         else{
             return "No POST data name";
