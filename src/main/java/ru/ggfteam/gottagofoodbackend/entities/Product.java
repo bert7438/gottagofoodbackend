@@ -1,7 +1,7 @@
 package ru.ggfteam.gottagofoodbackend.entities;
 
 public class Product {
-    private double productID;
+    private Integer productID;
     private String name;
     private String size;
     private double energy_value;
@@ -10,7 +10,7 @@ public class Product {
     private double carbohydrates;
     private double price;
 
-    public double getProductID() {
+    public Integer getProductID() {
         return productID;
     }
 
